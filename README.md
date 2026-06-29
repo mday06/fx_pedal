@@ -1,6 +1,5 @@
-Gheorghe Andrei
-
 Ayabaktî Melih-Muhammed
+Gheorghe Andrei
 
 Echipa #01, 413E
 
