@@ -46,21 +46,25 @@ Echipa #01, 413E
 - Tremolo seamănă și el cu Chorus, prin faptul că și acest efect este și el controlat de un LFO. Însă, în loc de un delay, LFO-ul modulează amplitudinea semnalului de ieșire. RATE este frecvența, DEPTH reprezintă cât de mult scade amplitudinea semnalului atunci când LFO-ul își atinge valoarea maximă (0 – Semnalul nu e modulat deloc, 1 – Amplitudinea semnalului e modulată până la 0).
 - Efectul Phaser este un efect de modulatie clasic, care imparte sunetul original in 2, modificand faza unuia dintre semnale. Si aici LFO moduleaza amplitudinea semnalului. RATE este frecventa, iar DEPTH reprezinta „intensitatea”, „adancimea” efectului
 
-1.  **Conexiuni și schematica dispozitivului:**
+2.  **Conexiuni și schematica dispozitivului:**
 
 Pentru ca microcontrolerul să poată citi corect semnalul de intrare, acesta are nevoie de un semnal între 0-1.1V<sup>[\[2\]](#footnote-3)</sup>. Semnalul de intrare este însă un semnal slab, care este centrat în 0 (adică are și valori negative) și are impedanță mare. Pentru a putea fi citit, trebuie mai întâi centrat într-o valoare pozitivă (în cazul nostru 0.55V) iar apoi trecut printr-un buffer/amplificator fără inversiune. Deoarece tensiunea maximă poate varia de la semnal la semnal, amplificarea poate fi reglată printr-un potențiometru (Factorul de amplificare variază de la 2 la 4). La ieșire din ESP, trebuie eliminată componenta continuă a semnalului, așa că acesta trece printr-un condensator, iar apoi printr-un filtru trece jos pentru eliminarea zgomotului de fundal adăugat de factori precum zgomotul sursei de alimentare și bruiajul cauzat de cablaj.
 
+
+<img width="1058" height="793" alt="image" src="https://github.com/user-attachments/assets/2af9edd4-94cb-4044-a0fe-b22d44156d78" />
 _(Poză cu dispozitivul și semnificația fiecarei părți)_
 
+
+<img width="1144" height="617" alt="image" src="https://github.com/user-attachments/assets/7232d847-a31e-44b6-8c95-9dd9877b1661" />
 _(Schematica circuitului)_
 
-1.  **Librarii Utilizate**
+3.  **Librarii Utilizate**
 
 - **driver/adc.h –** Libraria folosita pentru a accesa convertorul analog-digital.
 - **driver/dac.h** – Libraria folosita pentru a accesa convertorul digital-analog.
 - **String.h** – Libraria folosita pentru a procesa datele de intrare din seriala UART.
 
-1.  **Bibliografie:**
+4.  **Bibliografie:**
 
 - https://electronics.howstuffworks.com/gadgets/audio-music/guitar-pedal.htm
 - https://youtu.be/OSCKBmkrH_g?si=LobbcDQZIldl9G8D
